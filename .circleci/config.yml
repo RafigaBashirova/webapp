@@ -10,19 +10,6 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          keys:
-            - jpademo-{{ checksum "pom.xml" }}
-
-      - run: mvn dependency:go-offline
-
-      - save_cache:
-          paths:
-            - ~/.m2
-          key: webapp-{{ checksum "pom.xml" }}
-
-      # package into a jar
       - run: mvn clean package
 
-      # build and push docker image to docker hub
       - run: mvn clean compile jib:build -Djib.to.auth.username=$mydockerusername -Djib.to.auth.password=$dockerhubpassword -Dimage=rafiga619/webapp:$CIRCLE_BUILD_NUM
