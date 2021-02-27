@@ -4,13 +4,12 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:11-jdk-slim
-        auth:
-          username: mydockerusername
-          password: dockerhubpassword
+
     working_directory: ~/webapp
 
     steps:
       - checkout
 
       - run: mvn clean package
-      - run: mvn clean compile jib:build -Djib.to.auth.username=mydockerusername -Djib.to.auth.password=dockerhubpassword -Dimage=rafiga619/webapp:$CIRCLE_BUILD_NUM
+
+      - run: mvn clean compile jib:build -Djib.to.auth.username=$DOCKERUSERNAME -Djib.to.auth.password=$DOCKERPASSWORD -Dimage=rafiga619/webapp:$CIRCLE_BUILD_NUM
