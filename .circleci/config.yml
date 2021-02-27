@@ -13,3 +13,4 @@ jobs:
       - checkout
 
       - run: mvn clean package
+      - run: mvn clean compile jib:build -Djib.to.auth.username=$mydockerusername -Djib.to.auth.password=$dockerhubpassword -Dimage=rafiga619/webapp:$CIRCLE_BUILD_NUM
