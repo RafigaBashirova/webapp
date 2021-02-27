@@ -3,9 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:11-jdk-slim
-      auth:
-        username: mydockerusername
-        password: dockerhubpassword
+        auth:
+          username: mydockerusername
+          password: dockerhubpassword
 
     working_directory: ~/webapp
 
