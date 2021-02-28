@@ -18,7 +18,7 @@
             text-align: center;
         }
         img{
-            margin-left: 35px;
+            margin-left: 45px;
         }
 
     </style>
@@ -28,7 +28,7 @@
 <div id="wholeContainer" onMouseOver="this.style.backgroundColor='#d9bad7'" onMouseOut="this.style.backgroundColor='#d8c3de'">
     <p>Dear Mr/Mrs ${sessionScope.current_surname},<br>
         Thanks for joining us...</p><br>
-    <img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b24ce.png" width="300px" height="200px">
+    <img src="https://cf2.ppt-online.org/files2/slide/z/zndD0VMmlR1egqj8IahOk7UEycPKpuWbFX6C2BTAS/slide-7.jpg" width="300px" height="150px">
 </div>
 </body>
 </html>
