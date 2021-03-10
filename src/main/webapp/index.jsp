@@ -41,7 +41,7 @@
 
     <div id="holdsForms">
         <form method="POST" action="/webapp/loginedIn">
-            Name:
+            Name of user:
             <input type="text" id="Lname" name="name" placeholder="Name..."><br>
             Surname:
             <input type="text" id="Lsurname" name="surname" placeholder="Surname..."><br>
